@@ -1,5 +1,6 @@
 require "magic_links/engine"
 require 'rails'
+require 'magic_links/magic_token_authentication'
 
 module MagicLinks
   # Your code goes here...
