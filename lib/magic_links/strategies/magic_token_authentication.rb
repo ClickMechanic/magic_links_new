@@ -69,4 +69,4 @@ module MagicLinks
   end
 end
 
-Warden::Strategies.add(:magic_token_authentication, MagicLinks::MagicTokenAuthentication)
+Warden::Strategies.add(:magic_token_authentication, MagicLinks::Strategies::MagicTokenAuthentication)
