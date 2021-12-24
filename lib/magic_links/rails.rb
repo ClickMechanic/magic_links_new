@@ -7,7 +7,7 @@ module MagicLinks
       end
     end
 
-    initializer 'magic_links.middleware_redirect', before: :build_middleware_stack do |app|
+    initializer 'magic_links.middleware_redirect' do |app|
       app.middleware.insert_after ActionDispatch::Cookies, MagicLinks::MagicTokenRedirect
     end
 
