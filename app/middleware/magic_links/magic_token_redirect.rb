@@ -2,10 +2,10 @@ module MagicLinks
   class MagicTokenRedirect
     def initialize(app)
       @app = app
-      puts 'MagicLinks::MagicTokenRedirect middleware initialized'
     end
 
     def call(env)
+      puts 'MagicLinks::MagicTokenRedirect middleware called'
       Handler.new(env).handle || app.call(env)
     end
 
